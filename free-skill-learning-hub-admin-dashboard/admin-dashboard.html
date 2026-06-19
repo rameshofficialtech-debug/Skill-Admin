@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Free Skill Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="admin-style.css">
+</head>
+<body data-page="dashboard">
+  <div class="app">
+    <aside class="sidebar">
+      <div class="side-brand"><i class="fa-solid fa-graduation-cap"></i><div><h2>FSLH Admin</h2><span>Free Skill Learning Hub</span></div></div>
+      <nav class="nav-links">
+        <a href="admin-dashboard.html"><i class="fa-solid fa-chart-line"></i>Dashboard</a>
+        <a href="manage-courses.html"><i class="fa-solid fa-book-open"></i>Manage Courses</a>
+        <a href="manage-certificates.html"><i class="fa-solid fa-certificate"></i>Manage Certificates</a>
+        <a href="manage-students.html"><i class="fa-solid fa-users"></i>Manage Students</a>
+        <a href="manage-tips.html"><i class="fa-solid fa-lightbulb"></i>Manage Tips</a>
+        <a href="manage-subscriptions.html"><i class="fa-solid fa-credit-card"></i>Subscription Management</a>
+        <a href="content-settings.html"><i class="fa-solid fa-gear"></i>Content Settings</a>
+        <a href="admin-profile.html"><i class="fa-solid fa-user-shield"></i>Admin Profile</a>
+        <a href="#" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar"><button class="menu-btn"><i class="fa-solid fa-bars"></i></button><div><h1>Admin Dashboard</h1><p>Manage learning content and student subscriptions</p></div><div class="admin-chip"><img src="https://ui-avatars.com/api/?name=Admin&background=7c3aed&color=fff" alt="Admin"><span>Admin</span></div></header>
+      <section class="content">
+        <div class="section-title dashboard-section-title"><div><h2>Learning Platform</h2><p class="muted-copy">Existing course and student overview</p></div></div>
+        <div class="grid stats">
+          <div class="card stat-card"><div><p>Total Courses</p><h3 id="totalCourses">0</h3></div><i class="fa-solid fa-book"></i></div>
+          <div class="card stat-card"><div><p>Total Certificates</p><h3 id="totalCertificates">0</h3></div><i class="fa-solid fa-award"></i></div>
+          <div class="card stat-card"><div><p>Total Students</p><h3 id="totalStudents">0</h3></div><i class="fa-solid fa-users"></i></div>
+          <div class="card stat-card"><div><p>Active Users</p><h3 id="activeUsers">0</h3></div><i class="fa-solid fa-user-check"></i></div>
+        </div>
+        <div class="section-title dashboard-section-title"><div><h2>Subscription Overview</h2><p class="muted-copy">Live counts from student requests</p></div><a class="secondary-btn" href="manage-subscriptions.html">View all</a></div>
+        <div class="grid stats subscription-stats">
+          <div class="card stat-card stat-purple"><div><p>Total Subscribers</p><h3 id="totalSubscribers">0</h3></div><i class="fa-solid fa-users"></i></div>
+          <div class="card stat-card stat-amber"><div><p>Pending Verifications</p><h3 id="pendingVerifications">0</h3></div><i class="fa-solid fa-clock"></i></div>
+          <div class="card stat-card stat-cyan"><div><p>Free Trial Active Users</p><h3 id="trialActiveUsers">0</h3></div><i class="fa-solid fa-gift"></i></div>
+          <div class="card stat-card stat-orange"><div><p>Payment Required Users</p><h3 id="paymentRequiredUsers">0</h3></div><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <div class="card stat-card stat-green"><div><p>Paid Active Users</p><h3 id="paidActiveUsers">0</h3></div><i class="fa-solid fa-circle-check"></i></div>
+          <div class="card stat-card stat-red"><div><p>Expired Subscriptions</p><h3 id="expiredSubscriptions">0</h3></div><i class="fa-solid fa-calendar-xmark"></i></div>
+        </div>
+        <div class="grid two-col">
+          <div class="card"><div class="section-title"><h2>Recent Activities</h2><i class="fa-solid fa-clock"></i></div><div class="activities" id="subscriptionActivities"></div></div>
+          <div class="card"><div class="section-title"><h2>Quick Actions</h2></div><div class="quick-actions"><a href="manage-subscriptions.html"><i class="fa-solid fa-credit-card"></i>Manage Subscriptions</a><a href="manage-courses.html"><i class="fa-solid fa-book-open"></i>Add Course</a><a href="manage-certificates.html"><i class="fa-solid fa-certificate"></i>Add Certificate</a><a href="manage-tips.html"><i class="fa-solid fa-lightbulb"></i>Add Tip</a><a href="content-settings.html"><i class="fa-solid fa-gear"></i>Edit Content</a></div></div>
+        </div>
+        <div class="card platform-activity-card"><div class="section-title"><h2>Platform Activities</h2><i class="fa-solid fa-graduation-cap"></i></div><div class="activities"><div class="activity"><i class="fa-solid fa-plus"></i><div><b>New course added</b><p>Google AI Essentials was added to AI &amp; ML.</p></div></div><div class="activity"><i class="fa-solid fa-user"></i><div><b>Student joined</b><p>New student enrolled in Python course.</p></div></div><div class="activity"><i class="fa-solid fa-certificate"></i><div><b>Certificate updated</b><p>Microsoft Learn link updated.</p></div></div></div></div>
+      </section>
+    </main>
+  </div>
+  <script src="admin-script.js"></script>
+</body>
+</html>
